@@ -1,0 +1,38 @@
+%	\newcommand{cmd}[args][default]{def}
+\newcommand{\CompanyName}{\textsc{company~name}}
+
+
+
+\newcommand{\quot}{\char34}
+\newcommand{\pound}[1]{\char35{}#1}
+\newcommand{\dollar}[1]{\char36{}#1}
+\newcommand{\percent}[1]{#1\char37}
+\newcommand{\apos}{\char39}
+\newcommand{\at}{\char64}
+
+%	Keep quotation marks consistent
+\newcommand{\q}[1]{\quot{}#1\quot{}}
+
+
+
+%	Set to "{}" to show how stupid you are; set to "{,}" to show how snobby you are.
+\newcommand{\oxford}{,}
+
+
+
+%	Glossry entries and/or URLs
+\newcommand{\FIPS}[1]{\ifthenelse{% If
+\equal{#1}{}%
+}{% Then
+\gls{fips}%
+}{% Else
+\href{http://csrc.nist.gov/publications/PubsFIPS.html\##1}{FIPS #1}%
+}}% FIPS Defined
+
+\newcommand{\RFC}[1]{\ifthenelse{% If
+\equal{#1}{}%
+}{% Then
+\gls{rfc}%
+}{% Else
+\href{https://tools.ietf.org/html/rfc\##1}{RFC #1}%
+}}% RFC Defined

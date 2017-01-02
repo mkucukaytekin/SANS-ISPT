@@ -1,0 +1,92 @@
+\chapter{Acceptable Encryption Policy}
+\setcounter{section}{0}
+\subsection*{Free Use Disclaimer}
+This policy was created by or for the SANS Institute for the Internet community.
+All or parts of this policy can be freely used for your organization.
+There is no prior approval required.
+If you would like to contribute a new policy or updated version of this policy, please send email to \href{mailto:policy-resources@sans.org}{policy-resources\at{}sans.org}.
+\subsection*{Things to Consider}
+Please consult the Things to Consider FAQ for additional guidelines and suggestions for personalizing the SANS policies for your organization.
+\subsection*{Last Update Status}
+Updated June 2014
+
+\section{Overview}
+See \vref{G:AEP:Pu}.
+
+\section{Purpose}\label{G:AEP:Pu}
+The purpose of this policy is to provide guidance that limits the use of encryption to those algorithms that have received substantial public review and have been proven to work effectively.
+Additionally, this policy provides direction to ensure that Federal regulations are followed, and legal authority is granted for the dissemination and use of encryption technologies outside of the United States.
+
+\section{Scope}
+This policy applies to all \CompanyName{} employees and affiliates.
+
+\section{Policy}
+\subsection{Algorithm Requirements}
+\begin{enumerate}
+\item{}Ciphers in use must meet or exceed the set defined as \q{\acrshort{aes}-compatible} or \q{partially \acrshort{aes}-compatible} according to the \href{http://tools.ietf.org/html/draft-irtf-cfrg-cipher-catalog-01#section-3.1}{\acrshort{ietf}/\acrshort{irtf} Cipher Catalog}, or the set defined for use in the United States \href{http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2010.htm}{\gls{nist} publication \FIPS{140-2}\oxford{}} or any superseding documents according to the date of implementation.
+The use of the \gls{aes} is strongly recommended for symmetric encryption.
+\item{}
+Algorithms in use must meet the standards defined for use in \gls{nist} publication \FIPS{140-2} or any superseding document, according to date of implementation.
+The use of the \gls{rsa} and \gls{ecc} algorithms is strongly recommended for asymmetric encryption.
+\item{Signature Algorithms}\\
+\begin{tabular}{|p{0.75in}|p{1in}|p{2.75in}|}
+\hline 
+Algorithms & Key Length (minimum) & Additional Comment \\ 
+\hline 
+	\acrshort{ecdsa} &
+	P-256 &
+	Cisco Legal recommends \RFC{6090} compliance to avoid patent infringement.\\ 
+\hline 
+	\acrshort{rsa} & 
+	2048 & 
+	Must use a secure padding scheme. \href{http://tools.ietf.org/html/rfc3852#section-6.3}{\acrshort{pkcs} \pound{7}} padding scheme is recommended. Message hashing required. \\ 
+\hline 
+	\acrshort{ldwm} &
+	SHA256 &
+	Refer to \href{http://tools.ietf.org/html/draft-mcgrew-hash-sigs-00}{\acrshort{ldwm} Hash-based Signatures Draft}.\\ 
+\hline 
+\end{tabular} 
+\end{enumerate}
+\subsection{Hash Function Requirements}
+In general, \CompanyName{} adheres to the \href{http://csrc.nist.gov/groups/ST/hash/policy.html}{\acrshort{nist} Policy on Hash Functions}.
+\subsection{Key Agreement and Authentication}
+\begin{enumerate}
+\item
+Key exchanges must use one of the following cryptographic protocols:
+\begin{itemize}
+\item{Diffie-Hellman},
+\item{\gls{ike}}, or 
+\item{\gls{ecdh}}.
+\end{itemize}
+\item
+End points must be authenticated prior to the exchange or derivation of session keys.
+\item
+Public keys used to establish trust must be authenticated prior to use.  
+Examples of authentication include transmission via cryptographically signed message or manual verification of the public key hash.
+\item
+All servers used for authentication (for example, \gls{radius} or \gls{tacacs}) must have installed a valid certificate signed by a known trusted provider.
+\item
+All servers and applications using \gls{ssl} or \gls{tls} must have the certificates signed by a known, trusted provider. 
+\end{enumerate}
+\subsection{Key Generation}
+\begin{enumerate}
+\item
+Cryptographic keys must be generated and stored in a secure manner that prevents loss, theft, or compromise. 
+\item
+Key generation must be seeded from an industry standard \gls{rng}.  
+For examples, see \href{http://csrc.nist.gov/publications/fips/fips140-2/fips1402annexc.pdf}{\acrshort{nist} Annex C: Approved Random Number Generators for \acrshort{fips} PUB 140-2}.  
+\end{enumerate}
+\section{Policy Compliance}
+\subsection{Compliance Measurement}
+The \gls{infosec} team will verify compliance to this policy through various methods, including but not limited to, business tool reports, internal and external audits, and feedback to the policy owner. 
+\subsection{Exceptions}
+Any exception to the policy must be approved by the \gls{infosec} team in advance. 
+\subsection{Non-Compliance}
+An employee found to have violated this policy may be subject to disciplinary action, up to and including termination of employment. 
+\section{Related Standards, Policies and Processes}
+\begin{itemize}
+\item
+\href{http://csrc.nist.gov/publications/fips/fips140-2/fips1402annexc.pdf}{\acrshort{nist} Annex C: Approved Random Number Generators for \acrshort{fips} PUB 140-2}
+\item
+\href{http://csrc.nist.gov/groups/ST/hash/policy.html}{\acrshort{nist} Policy on Hash Functions}
+\end{itemize}

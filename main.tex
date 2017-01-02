@@ -1,0 +1,82 @@
+\documentclass[letterpaper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\include{./packages}
+\include{./macros}
+
+\begin{document}
+\newcommand{\xio}{\textsf{\textbf{x\i{}o}\texttt{\textsc{nyc}}}}
+\author{\xio}
+\title{SANS Internet Policy Templates}
+\date{}
+
+%\frontmatter
+\maketitle
+%\tableofcontents
+\include{./glossary}
+\glsaddall
+\makeglossaries
+\printglossaries
+%\mainmatter
+\part{General}
+\include{./G/AEP}%Acceptable Encryption Policy
+%\include{./G/AUP}%Acceptable Use Policy
+%\include{./G/CDP}%Clean Desk Policy
+%\include{./G/DBRP}%Data Breach Response Policy
+%\include{./G/DRPP}%Disaster Recovery Plan Policy
+%\include{./G/DSAP}%Digital Signature Acceptance Policy
+%\include{./G/EmP}%Email Policy
+%\include{./G/EtP}%Ethics Policy
+%\include{./G/PRPP}%Pandemic Response Planning Policy
+%\include{./G/PCG}%Password Construction Guidelines
+%\include{./G/PPP}%Password Protection Policy
+%\include{./G/SRPP}%Security Response Plan Policy
+%\include{./G/EUEKPP}%End User Encryption Key Protection Policy
+%\part{Network Security}
+%\include{./NS/AAP}%Acquisition Assessment Policy
+%\include{./NS/BBRP}%Bluetooth Baseline Requirements Policy
+%\include{./NS/RAP}%Remote Access Policy
+%\include{./NS/RATP}%Remote Access Tools Policy
+%\include{./NS/RaSSP}%Router and Switch Security Policy
+%\include{./NS/WCP}%Wireless Communication Policy
+%\include{./NS/WCS}%Wireless Communication Standard
+%\part{Server Security}
+%\include{./SS/DCP}%Database Credentials Policy
+%\include{./SS/TEDP}%Technology Equipment Disposal Policy
+%\include{./SS/ILS}%Information Logging Standard
+%\include{./SS/LSP}%Lab Security Policy
+%\include{./SS/SSP}%Server Security Policy
+%\include{./SS/SIP}%Software Installation Policy
+%\include{./SS/WSfHP}%Workstation Security (For HIPAA) Policy
+\part{Application Security}
+\include{./AS/WASP}%Web Application Security Policy
+%\part{Old/Retired}
+%The contents of this part are presented for informative purposes and should not be considered normative.
+%\include{./OR/AILSP}%Analog/ISDN Line Security Policy
+%\include{./OR/AVG}%Anti-Virus Guidelines
+%\include{./OR/SAP}%Server Audit Policy
+%\include{./OR/AFEP}%Automatically Forwarded Email Policy
+%\include{./OR/CEP}%Communications Equipment Policy
+%\include{./OR/DiAP}%Dial In Access Policy
+%\include{./OR/EP}%Extranet Policy
+%\include{./OR/IDEP}%Internet DMZ Equipment Policy
+%\include{./OR/IUP}%Internet Usage Policy
+%\include{./OR/MDEP}%Mobile Device Encryption Policy
+%\include{./OR/PCDaVP}%Personal Communication Devices and Voicemail Policy
+%\include{./OR/RMP}%Removable Media Policy
+%\include{./OR/RAP}%Risk Assessment Policy
+%\include{./OR/SMPP}%Server Malware Protection Policy
+%\include{./OR/SEAP}%Social Engineering Awareness Policy
+%\include{./OR/DLSP}%DMZ Lab Security Policy
+%\include{./OR/ERP}%Email Retention Policy
+%\include{./OR/EIUMaFP}%Employee Internet Use Monitoring and Filtering Policy
+%\include{./OR/LAVP}%Lab Anti Virus Policy
+%\include{./OR/MEERP}%Mobile Employee Endpoint Responsibility Policy
+%\include{./OR/RAMCS}%Remote Access Mobile Computing Storage
+%\include{./OR/VPNP}%Virtual Private Network Policy
+%\part{Miscellanea}
+%
+%\backmatter
+%% bibliography, glossary and index would go here.
+\end{document}
