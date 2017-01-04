@@ -4,6 +4,10 @@
 
 \include{./packages}
 \include{./macros}
+\include{./commons}
+\include{./stylesheet}
+
+\makeglossaries
 
 \begin{document}
 \newcommand{\xio}{\textsf{\textbf{x\i{}o}\texttt{\textsc{nyc}}}}
@@ -13,15 +17,14 @@
 
 %\frontmatter
 \maketitle
-%\tableofcontents
+\tableofcontents
 \include{./glossary}
 \glsaddall
-\makeglossaries
 \printglossaries
 %\mainmatter
 \part{General}
 \include{./G/AEP}%Acceptable Encryption Policy
-%\include{./G/AUP}%Acceptable Use Policy
+\include{./G/AUP}%Acceptable Use Policy
 %\include{./G/CDP}%Clean Desk Policy
 %\include{./G/DBRP}%Data Breach Response Policy
 %\include{./G/DRPP}%Disaster Recovery Plan Policy
@@ -29,8 +32,8 @@
 %\include{./G/EmP}%Email Policy
 %\include{./G/EtP}%Ethics Policy
 %\include{./G/PRPP}%Pandemic Response Planning Policy
-%\include{./G/PCG}%Password Construction Guidelines
-%\include{./G/PPP}%Password Protection Policy
+\include{./G/PCG}%Password Construction Guidelines
+\include{./G/PPP}%Password Protection Policy
 %\include{./G/SRPP}%Security Response Plan Policy
 %\include{./G/EUEKPP}%End User Encryption Key Protection Policy
 %\part{Network Security}

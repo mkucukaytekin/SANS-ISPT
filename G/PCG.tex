@@ -1,0 +1,82 @@
+\chapter{Password Construction Guidelines}\label{G:PCG}
+\CommonIntroduction
+\section{Overview}
+Passwords are a critical component of information security.  
+Passwords serve to protect user accounts; however, a poorly constructed password may result in the compromise of individual systems, data, or \oldnew{the Cisco network}{networks}.  
+This guideline provides best practices for creating secure passwords.
+\section{Purpose}
+The purpose of this guidelines is to provide best practices for the created of strong passwords.
+\section{Scope}
+This guideline applies to employees, contractors, consultants, temporary and other workers\oldnew{ at Cisco}{}, including all personnel affiliated with third parties.  
+This guideline applies to all passwords including but not limited to user-level accounts, system-level accounts, web accounts, \email{} accounts, screen\oldnew{ }{}saver protection, voicemail, and local router logins.
+\section{Statement of Guidelines}
+All passwords should meet or exceed the following guidelines.
+
+Strong passwords have the following characteristics:
+\begin{itemize}
+\item
+Contain at least 12 alphanumeric characters.
+\item
+Contain both upper and lower case letters. 
+\item
+Contain at least one number (for example, \texttt{0}-\texttt{9}).
+\item
+Contain at least one special character (for example,\texttt{!\$\%\^{}\&*()\_+|\~{}-=\textbackslash\{\}`\{\}[]:";'<>?,/}).%TODO
+\end{itemize}
+Poor, or weak, passwords have the following characteristics: 
+\begin{itemize}
+\item
+Contain less than eight characters.
+\item
+Can be found in a dictionary, including foreign language, or exist in a language slang, dialect\oxford{} or jargon.
+\item
+Contain personal information such as birthdates, addresses, phone numbers, or names of family members, pets, friends, and fantasy characters.
+\item
+Contain work-related information such as building names, system commands, sites, companies, hardware, or software.
+\item
+Contain number patterns such as \texttt{aaabbb}, \texttt{qwerty}, \texttt{zyxwvuts}, or \texttt{123321}.
+\item
+Contain common words spelled backward, or preceded or followed by a number (for example, \texttt{terces}, \texttt{secret1} or \texttt{1secret}).
+\item
+Are some version of \q{\texttt{Welcome123}}\oldnew{}{,} \q{\texttt{Password123}}\oldnew{}{\oxford{} or} \q{\texttt{Changeme123}}.
+\end{itemize}
+You should never write down a password.  
+Instead, try to create passwords that you can remember easily.  
+One way to do this is create a password based on a song title, affirmation, or other phrase.  
+For example, the phrase, \q{This \oldnew{M}{m}ay \oldnew{B}{b}e \oldnew{O}{o}ne \oldnew{W}{w}ay \oldnew{T}{t}o \oldnew{R}{r}emember} could become the password \texttt{TmB1w2R!} or another variation.
+
+(NOTE: Do not use either of these examples as passwords!)
+
+\subsection{Passphrases}
+Passphrases generally are used for public/private key authentication.  
+A public/private key system defines a mathematical relationship between the public key that is known by all, and the private key, that is known only to the user.  
+Without the passphrase to unlock the private key, the user cannot gain access.
+
+A passphrase is similar to a password in use; however, it is relatively long and constructed of multiple words, which provides greater security against dictionary attacks.  
+Strong passphrases should follow the general password construction guidelines to include upper and lowercase letters, numbers, and special characters (for example, \texttt{TheTrafficOnThe101Was*\&!\$ThisMorning!}).
+
+\CommonPolicyCompliance
+\section{Related Standards, Policies\oxford{} and Processes}
+None.
+\section{Definitions and Terms}
+None.
+\section{Revision History}
+\begin{tabular}{|p{1.25in}|p{1.25in}|p{3in}|}
+\hline
+	Date of Change&
+	Responsible&
+	Summary of Change\\
+\hline
+	June 2014&
+	SANS Policy Team&
+	Separated out from the \textsl{Password Policy} and converted to new format.\\
+\hline
+	Dec. 2016---Jan. 2017&
+	\xio{}&
+	Conversion to \LaTeX{}; removed references to Cisco.\\
+\hline
+	 &
+	 &
+	 \\
+\hline
+\end{tabular}

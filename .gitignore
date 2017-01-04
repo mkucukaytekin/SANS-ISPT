@@ -5,6 +5,8 @@
 *.out
 *.pdf
 *.gz
+*.glsdefs
+*.toc
 
 #################
 ## Eclipse

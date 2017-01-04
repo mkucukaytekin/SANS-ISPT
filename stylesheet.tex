@@ -1,0 +1,22 @@
+%	Stylesheet
+
+%	Keep quotation marks consistent
+\newcommand{\q}[1]{\quot{}#1\quot{}}
+
+%	Set to "{}" to show how stupid you are; set to "{,}" to show how snobby you are.
+\newcommand{\oxford}{,}
+
+%	"et cetera"
+%	<http://latex-alive.tumblr.com/post/827168808/correct-punctuation-spaces>
+\makeatletter
+\newcommand\etc{etc\@ifnextchar.{}{.\@}}
+\makeatother
+
+%	"et cetera"
+\makeatletter
+\newcommand\eg{e.g.\@ifnextchar.{}{.\@}}
+\makeatother
+
+%	Include the "-" if you're old-fasioned; omit the "-" if you're newfangled.
+\newcommand{\email}{e-mail}
+\newcommand{\Email}{E-mail}

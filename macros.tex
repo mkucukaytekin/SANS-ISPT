@@ -1,24 +1,20 @@
-%	\newcommand{cmd}[args][default]{def}
+%	Variables that should be changed to reflect your target
 \newcommand{\CompanyName}{\textsc{company~name}}
 
+%	Changes that have been made from the original text (substitute "old" for "new")
+\usepackage{ulem}
+\newcommand{\oldnew}[2]{\sout{#1}\uline{#2}}
 
+%	Inline commenting
+\newcommand{\hide}[1]{}% REMarkably simple
 
+%	Annoyance characters
 \newcommand{\quot}{\char34}
 \newcommand{\pound}[1]{\char35{}#1}
 \newcommand{\dollar}[1]{\char36{}#1}
 \newcommand{\percent}[1]{#1\char37}
 \newcommand{\apos}{\char39}
 \newcommand{\at}{\char64}
-
-%	Keep quotation marks consistent
-\newcommand{\q}[1]{\quot{}#1\quot{}}
-
-
-
-%	Set to "{}" to show how stupid you are; set to "{,}" to show how snobby you are.
-\newcommand{\oxford}{,}
-
-
 
 %	Glossry entries and/or URLs
 \newcommand{\FIPS}[1]{\ifthenelse{% If
