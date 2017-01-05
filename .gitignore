@@ -7,6 +7,8 @@
 *.gz
 *.glsdefs
 *.toc
+www.sans.org
+cleanup.sh
 
 #################
 ## Eclipse
