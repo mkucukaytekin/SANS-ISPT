@@ -19,14 +19,12 @@
 \maketitle
 \tableofcontents
 \include{./glossary}
-\glsaddall
-\printglossaries
 %\mainmatter
 \part{General}
 \include{./G/AEP}%Acceptable Encryption Policy
 \include{./G/AUP}%Acceptable Use Policy
-%\include{./G/CDP}%Clean Desk Policy
-%\include{./G/DBRP}%Data Breach Response Policy
+\include{./G/CDP}%Clean Desk Policy
+\include{./G/DBRP}%Data Breach Response Policy
 %\include{./G/DRPP}%Disaster Recovery Plan Policy
 %\include{./G/DSAP}%Digital Signature Acceptance Policy
 %\include{./G/EmP}%Email Policy
@@ -82,4 +80,6 @@
 %
 %\backmatter
 %% bibliography, glossary and index would go here.
+\glsaddall
+\printglossaries
 \end{document}

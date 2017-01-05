@@ -1,12 +1,14 @@
 %	Variables that should be changed to reflect your target
 \newcommand{\CompanyName}{\textsc{company~name}}
-
+\newcommand{\OrganizationName}{\textsc{organization~name}}
 %	Changes that have been made from the original text (substitute "old" for "new")
 \usepackage{ulem}
 \newcommand{\oldnew}[2]{\sout{#1}\uline{#2}}
+\newcommand{\del}[1]{\oldnew{#1}{}}
+\newcommand{\ins}[1]{\oldnew{}{#1}}
 
 %	Inline commenting
-\newcommand{\hide}[1]{}% REMarkably simple
+\newcommand{\hide}[1]{}%	REMarkably simple
 
 %	Annoyance characters
 \newcommand{\quot}{\char34}
@@ -23,7 +25,7 @@
 \gls{fips}%
 }{% Else
 \href{http://csrc.nist.gov/publications/PubsFIPS.html\##1}{FIPS #1}%
-}}% FIPS Defined
+}}
 
 \newcommand{\RFC}[1]{\ifthenelse{% If
 \equal{#1}{}%
@@ -31,4 +33,6 @@
 \gls{rfc}%
 }{% Else
 \href{https://tools.ietf.org/html/rfc\##1}{RFC #1}%
-}}% RFC Defined
+}}
+
+%	

@@ -17,6 +17,16 @@
 \newcommand\eg{e.g.\@ifnextchar.{}{.\@}}
 \makeatother
 
+%	"id est"
+\makeatletter
+\newcommand\ie{i.e.\@ifnextchar.{}{.\@}}
+\makeatother
+
 %	Include the "-" if you're old-fasioned; omit the "-" if you're newfangled.
 \newcommand{\email}{e-mail}
 \newcommand{\Email}{E-mail}
+\newcommand{\cdrom}{CD-ROM}
+
+
+%	Intradocument links
+\newcommand{\see}[1]{\hyperref[#1]{\ref{#1} \textsl{\nameref{#1}}}}
