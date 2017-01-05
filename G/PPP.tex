@@ -23,7 +23,7 @@ User accounts that have system-level privileges granted through group membership
 Where \gls{snmp} is used, the community strings must be defined as something other than the standard defaults of public, private\oxford{} and system \oldnew{and}{, and passwords} must be different from the passwords used to log in interactively.  
 \gls{snmp} community strings must meet password construction guidelines.
 \end{enumerate}
-\section{Password Change}
+\subsection{Password Change}
 \begin{enumerate}
 \item
 All system-level passwords (for example, \texttt{root}, enable, NT admin, application administration accounts\oxford{} and so on) must be changed on at least a quarterly basis.
@@ -34,7 +34,7 @@ The recommended change interval is every four months.
 Password cracking or guessing may be performed on a periodic or random basis by the \gls{infosec} team or its delegates.  
 If a password is guessed or cracked during one of these scans, the user will be required to change it \oldnew{to be in}{in} compliance with the \hyperref[G:PCG]{Password Construction Guidelines}.
 \end{enumerate}
-\subsection*{Password Protection}
+\subsection{Password Protection}
 \begin{enumerate}
 \item
 Passwords must not be shared with anyone.  
@@ -82,7 +82,7 @@ A passphrase is typically composed of multiple words.
 Because of this, a passphrase is more secure against \q{dictionary attacks}.
 
 A good passphrase is relatively long and contains a combination of upper and lowercase letters and numeric and punctuation characters.  
-An example of a good passphrase\oldnew{:}{ is} \verb"The*?#>*@TrafficOnThe101Was*&#!#ThisMorning".
+An example of a good passphrase\oldnew{:}{ is} \q{\texttt{The*?\asciihash{}>\asciihash{}@Traf\/f\/icOnThe101Was*\asciiampersand{}\asciihash{}!\asciihash{}ThisMorning}}.
 
 All of the rules above that apply to passwords apply to passphrases.
 \CommonPolicyCompliance

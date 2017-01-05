@@ -7,8 +7,8 @@ See https://www.sans.org/security-resources/policies for more information.
 	* ✓ Acceptable Encryption Policy
 	* ✓ Acceptable Use Policy
 	* ✓ Clean Desk Policy
-	* ½ Data Breach Response Policy
-	* Disaster Recovery Plan Policy
+	* ✓ Data Breach Response Policy<small><br>Needs a good copy-editor</small>
+	* ✓ Disaster Recovery Plan Policy
 	* Digital Signature Acceptance Policy
 	* Email Policy
 	* Ethics Policy
