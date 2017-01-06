@@ -3,20 +3,20 @@
 See https://www.sans.org/security-resources/policies for more information.
 
 ## Contents
-* General
+* ✓ General
 	* ✓ Acceptable Encryption Policy
 	* ✓ Acceptable Use Policy
 	* ✓ Clean Desk Policy
 	* ✓ Data Breach Response Policy<small><br>Needs a good copy-editor</small>
 	* ✓ Disaster Recovery Plan Policy
-	* Digital Signature Acceptance Policy
-	* Email Policy
-	* Ethics Policy
-	* Pandemic Response Planning Policy
+	* ✓ Digital Signature Acceptance Policy
+	* ✓ Email Policy
+	* ✓ Ethics Policy
+	* ✓ Pandemic Response Planning Policy
 	* ✓ Password Construction Guidelines
 	* ✓ Password Protection Policy
-	* Security Response Plan Policy
-	* End User Encryption Key Protection Policy
+	* ✓ Security Response Plan Policy
+	* ✓ End User Encryption Key Protection Policy
 * Network Security
 	* Acquisition Assessment Policy
 	* Bluetooth Baseline Requirements Policy

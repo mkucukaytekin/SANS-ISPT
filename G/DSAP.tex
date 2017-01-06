@@ -1,0 +1,65 @@
+\chapter{Digital Signature Acceptance Policy}
+\CommonIntroduction
+\section{Overview}
+See \see{g:dsap:p}.
+\section{Purpose}\label{g:dsap:p}
+The purpose of this policy is to provide guidance on when digital signatures are considered accepted means of validating the identity of a signer in \CompanyName{} electronic documents and correspondence, and thus a substitute for traditional \q{wet} signatures, within the organization.  
+Because communication has become primarily electronic, the goal is to reduce confusion about when a digital signature is trusted.
+\section{Scope}
+This policy applies to all \CompanyName{} employees and affiliates.  
+
+This policy applies to all \CompanyName{} employees, contractors, and other agents conducting \CompanyName{} business with a \CompanyName{}-provided digital key pair.  
+This policy applies only to intra-organization digitally signed documents and correspondence and not to electronic materials sent to or received from non-\CompanyName{} affiliated persons or organizations.
+\section{Policy}
+A digital signature is an acceptable substitute for a wet signature on any intra-organization document or correspondence, with the exception of those noted on the site of the \gls{cfo} on the organization's intranet\oldnew{: \textsc{CFO's Office URL goes here}}{.}
+
+The \gls{cfo}'s office will maintain an organization-wide list of the types of documents and correspondence that are not covered by this policy.
+
+Digital signatures must apply to individuals only.  
+Digital signatures for roles, positions, or titles (\eg{} the \gls{cfo}) are not considered valid.
+\subsection{Responsibilities}
+Digital signature acceptance requires specific action on both the part of the employee signing the document or correspondence (hereafter the \oldnew{\textit{signer}}{\q{signer}}, and the employee receiving/reading the document or correspondence (hereafter the \oldnew{\textit{recipient}}{\q{recipient}}).
+\subsection{Signer Responsibilities}
+\begin{enumerate}
+\item 
+Signers must obtain a signing key pair from \oldnew{\textsc{Company Name identity management group}}{\CompanyName{} \IdentityManagementGroup{}}.  This key pair will be generated using \CompanyName{}'s \gls{pki} and the public key will be signed by the \CompanyName{}'s \gls{ca}, \CertificateAuthority{}.
+\item 
+Signers must sign documents and correspondence using software approved by \CompanyName{} \gls{it} organization.
+\item 
+Signers must protect their private key and keep it secret.
+\item 
+If a signer believes that the signer's private key was stolen or otherwise compromised, the signer must contact \CompanyName{} \IdentityManagementGroup{} immediately to have the signer's digital key pair revoked.
+\end{enumerate}
+\subsection{Recipient Responsibilities}
+\begin{enumerate}
+\item 
+Recipients must read documents and correspondence using software approved by \CompanyName{} \gls{it} department.
+\item 
+Recipients must verify that the signer's public key was signed by the \CompanyName{}'s \gls{ca}, \CertificateAuthority{}, by viewing the details about the signed key using the software they are using to read the document or correspondence.
+\item 
+If the signer's digital signature does not appear valid, the recipient must not trust the source of the document or correspondence.
+\item 
+If a recipient believes that a digital signature has been abused, the recipient must report the recipient's concern to \CompanyName{} \IdentityManagementGroup{}.
+\end{enumerate}
+\CommonPolicyCompliance
+\section{Related Standards, Policies and Processes}
+None.
+\section{References}
+Note that these references were used only as guidance in the creation of this policy template.  
+We highly recommend that you consult with your organization's legal counsel, since there may be federal, state, or local regulations to which you must comply.  
+Any other \gls{pki}-related policies your organization has may also be cited here.
+\begin{itemize}
+\item
+\href{http://www.abanet.org/scitech/ec/isc/dsgfree.html}{American Bar Association (ABA) Digital Signature Guidelines}\newline\url{http://www.abanet.org/scitech/ec/isc/dsgfree.html}
+\item
+\href{http://mn.gov/oet/policies-and-standards/business/policy-pages/standard_digital_signature.jsp}{Minnesota State Agency Digital Signature Implementation and Use}\newline\url{http://mn.gov/oet/policies-and-standards/business/policy-pages/standard_digital_signature.jsp}
+\item
+\href{https://www.revisor.leg.state.mn.us/statutes/?id=325K&view=chapter-stat.325K.001}{Minnesota Electronic Authentication Act}\newline\url{https://www.revisor.leg.state.mn.us/statutes/?id=325K&view=chapter-stat.325K.001}
+\item
+\href{http://mesa.cabq.gov/policy.nsf/WebApprovedX/4D4D4667D0A7953A87256E7B004F6720?OpenDocument}{City of Albuquerque E-Mail Encryption / Digital Signature Policy}\newline\url{http://mesa.cabq.gov/policy.nsf/WebApprovedX/4D4D4667D0A7953A87256E7B004F6720?OpenDocument}
+\item
+\href{http://law.justia.com/westvirginia/codes/39a/wvc39a-3-2.html}{West Virginia Code \S{}39A-3-2:  Acceptance of electronic signature by governmental entities in satisfaction of signature requirement.}\newline\url{http://law.justia.com/westvirginia/codes/39a/wvc39a-3-2.html} 
+\end{itemize}
+\section{Definitions and Terms}
+None.
+\CommonRevisionHistory
