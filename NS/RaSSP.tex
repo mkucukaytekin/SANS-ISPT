@@ -1,0 +1,99 @@
+\chapter{Router and Switch Security Policy}\label[NS:RaSSP]
+\CommonIntroduction
+\section{Overview}
+See \see{NS:RaSSP:Pu}
+\section{Purpose}\label{NS:RaSSP:Pu}
+This document describes a required minimal security configuration for all routers and switches connecting to a production network or used in a production capacity at or on behalf of \CompanyName{}.
+\section{Scope}
+All employees, contractors, consultants, temporary\oxford{} and other workers at \oldnew{Cisco}{\CompanyName{}} and its subsidiaries must adhere to this policy.  
+All routers and switches connected to \oldnew{Cisco}{\CompanyName{}} production networks are affected.
+\section{Policy}
+Every router must meet the following configuration standards:
+\begin{enumerate}
+\item
+No local user accounts are configured on the router.  
+Routers and switches must use \gls{tacacsp} for all user authentication.
+\item
+The enable password on the router or switch must be kept in a secure encrypted form.  
+The router or switch must have the enable password set to the current production router/switch password from the device's support organization.
+\item
+The following services or features must be disabled:
+\begin{enumerate}
+\item
+\gls{ip} directed broadcasts 
+\item
+Incoming packets at the router/switch sourced with invalid addresses such as \RFC{1918} addresses
+\item
+\gls{tcp} small services 
+\item
+\gls{udp} small services 
+\item
+All source routing and switching
+\item
+All web services running on router
+\item
+Cisco discovery protocol on Internet connected interfaces
+\item
+\gls{telnet}, \gls{ftp}, and \gls{http} services
+\item
+Auto-configuration
+\end{enumerate}
+\item
+The following services should be disabled unless a business justification is provided:
+\begin{enumerate}
+\item 
+Cisco discovery protocol and other discovery protocols
+\item 
+Dynamic trunking
+\item 
+Scripting environments, such as the \gls{tcl} shell
+\end{enumerate}
+\item
+The following services must be configured:
+\begin{enumerate}
+\item 
+Password-encryption
+\item
+\gls{ntp} configured to a corporate standard source
+\end{enumerate}
+\item
+All routing updates shall be done using secure routing updates.
+\item
+Use corporate standardized \gls{snmp} community strings.  
+Default strings, such as public or private must be removed.  
+\gls{snmp} must be configured to use the most secure version of the protocol allowed for by the combination of the device and management systems.
+\item
+\gls{acl}s must be used to limit the source and type of traffic that can terminate on the device itself.
+\item
+\gls{acl}s for transiting the device are to be added as business needs arise. 
+\item
+The router must be included in the corporate enterprise management system with a designated \gls{ptoc}. 
+\item
+Each router must have the following statement presented for all forms of login whether remote or local:
+\begin{quote}\ttfamily{}UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.  You must have explicit permission to access or configure this device.  All activities performed on this device may be logged\del{,} and violations of this policy may result in disciplinary action\oldnew{, and}{ and/or} may be reported to law enforcement.  There is no right to privacy on this device.  Use of this system shall constitute consent to monitoring.
+\end{quote}
+\item
+\gls{telnet} may never be used across any network to manage a router, unless there is a secure tunnel protecting the entire communication path.  
+\gls{ssh} version 2 is the preferred management protocol.
+\item
+Dynamic routing protocols must use authentication in routing updates sent to neighbors.  
+Password hashing for the authentication string must be enabled when supported.
+\item
+The corporate router configuration standard will define the category of sensitive routing and switching devices, and require additional services or configuration on sensitive devices including:
+\begin{enumerate}
+\item
+\gls{ip} access list accounting
+\item
+Device logging
+\item
+Incoming packets at the router sourced with invalid addresses, such as \RFC{1918} addresses, or those that could be used to spoof network traffic shall be dropped
+\item
+Router console and modem access must be restricted by additional security controls
+\end{enumerate}
+\end{enumerate}
+\CommonPolicyCompliance
+\section{Related Standards, Policies\oxford{} and Processes}
+None.
+\section{Definitions and Terms}
+None.
+\CommonRevisionHistory

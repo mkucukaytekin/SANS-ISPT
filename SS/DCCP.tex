@@ -1,0 +1,114 @@
+\chapter{Database Credentials Coding Policy}
+\CommonIntroduction
+\section{Overview}
+Database authentication credentials are a necessary part of authorizing application to connect to internal databases.  
+However, incorrect use, storage\oxford{} and transmission of such credentials could lead to compromise of very sensitive assets and be a springboard to wider compromise within the organization. 
+\section{Purpose}
+This policy states the requirements for securely storing and retrieving database usernames and passwords (\ie, database credentials) for use by a program that will access a database running on one of \CompanyName{}'s networks. 
+
+Software applications running on \CompanyName{}'s networks may require access to one of the many internal database servers. In order to access these databases, a program must authenticate to the database by presenting acceptable credentials.  
+If the credentials are improperly stored, the credentials may be compromised leading to a compromise of the database. 
+\section{Scope}
+This policy is directed at all system implementer and/or software engineers who may be coding applications that will access a production database server on the \CompanyName{} Network.  
+This policy applies to all software (programs, modules, libraries\oxford{} or \glspl{api}\ins{)} that will access a \CompanyName{}\del{,} multi-user production database.  
+It is recommended that similar requirements be in place for non-production servers and lap environments since they don't always use sanitized information. 
+
+\section{Policy}
+\subsection{General}
+In order to maintain the security of \CompanyName{}'s internal databases, access by software programs must be granted only after authentication with credentials.  
+The credentials used for this authentication must not reside in \del{the main, executing body of} the program's source code in clear text.  
+Database credentials must not be stored in a location that can be accessed through a web server. 
+
+\subsection{Specific Requirements }
+
+\subsubsection{Storage of Data Base User Names and Passwords}
+\begin{itemize}
+\item 
+Database user names and passwords may be stored in a file separate from the executing body of the program's code.  
+This file must not be world readable or writeable.
+\item
+Database credentials may reside on the database server.  
+In this case, a hash function number identifying the credentials may be stored in the executing body of the program's code. 
+\item
+Database credentials may be stored as part of an authentication server (\ie, an entitlement directory), such as an \gls{ldap} server used for user authentication.  
+Database authentication may occur on behalf of a program as part of the user authentication process at the authentication server.  
+In this case, there is no need for programmatic use of database credentials. 
+\item
+Database credentials may not reside in the documents tree of a web server. 
+\item
+\Passthrough{} authentication (\ie, Oracle OPS\$ authentication) must not allow access to the database based solely upon a remote user's authentication on the remote host. 
+\item
+Passwords or passphrases used to access a database must adhere to \oldnew{the Password Policy}{\PasswordPolicies}. 
+\end{itemize}
+\subsubsection{Retrieval of Database User Names and Passwords}
+\begin{itemize}
+\item
+If stored in a file that is not source code, then database user names and passwords must be read from the file immediately prior to use.  
+Immediately following database authentication, the memory containing the user name and password must be released or cleared. 
+\item
+The scope into which you may store database credentials must be physically separated from the other areas of your code, \eg, the credentials\ins{,} must be in a separate source file.  
+The file that contains the credentials must contain no other code but the credentials (\ie, the user name and password) and any functions, routines\oxford{} or methods that will be used to access the credentials. 
+\item
+For languages that execute from source code, the credentials' source file must not reside in the same browseable or executable file directory tree in which the executing body of code resides. 
+\end{itemize}
+\subsubsection{Access to Database User Names and Passwords}
+\begin{itemize}
+\item
+Every program or every collection of programs implementing a single business function must have unique database credentials.  
+Sharing of credentials between programs is not allowed. 
+\item
+Database passwords used by programs are system-level passwords as defined by \oldnew{the Password Policy}{\PasswordPolicies}. 
+\item
+Developer groups must have a process in place to ensure that database passwords are controlled and changed in accordance with \oldnew{the Password Policy}{\PasswordPolicies}.  
+This process must include a method for restricting knowledge of database passwords to a need-to-know basis. 
+\end{itemize}
+\subsection{Coding Techniques for Implementing this Policy}
+\textit{Add references to your site-specific guidelines for the different coding languages such as Perl, JAVA, C and/or Cpro.}
+\textsc{Specific guidelines governing coding techniques will be developed as needed.  %
+At present, and for the foreseeable future, no database will be accessed through programming languages.%
+}%%%%%
+\CommonPolicyCompliance
+A violation of this policy by a temporary worker, contractor\oxford{} or vendor may result in the termination of their contract or assignment with \CompanyName{}.
+
+Any program code or application that is found to violate this policy must be remediated within a 90 day period.  
+\section{Related Standards, Policies\oxford{} and Processes}
+\section{Related Standards, Policies and Processes}
+\begin{itemize}
+\item \see{G:AEP}%Acceptable Encryption Policy
+\item \del{Password Policy}
+\item \ins{\see{G:PCG}}
+\item \ins{\see{G:PPP}}
+\end{itemize}
+\section{Definitions and Terms}
+\begin{itemize}
+\item
+Credentials
+\item
+Executing Body
+\item
+Hash Function
+\item
+\gls{ldap}
+\item
+Module
+\end{itemize}
+\section{Revision History}
+\begin{tabular}{|p{1.25in}|p{1.25in}|p{3in}|}
+\hline
+	Date of Change&
+	Responsible&
+	Summary of Change\\
+\hline
+	June 2014&
+	SANS Policy Team&
+	Formatted into new template and made minor wording changes.\\
+\hline
+	Dec. 2016\newline{}Jan. 2017&
+	\xio{}&
+	Conversion to \LaTeX{}.\\
+\hline
+	 &
+	 &
+	 \\
+\hline
+\end{tabular}

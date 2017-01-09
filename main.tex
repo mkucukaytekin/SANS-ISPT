@@ -7,7 +7,9 @@
 \include{./commons}
 \include{./stylesheet}
 
+\makeindex
 \makeglossaries
+\loadglsentries{./glossary}
 
 \begin{document}
 \newcommand{\xio}{\textsf{\textbf{x\i{}o}\texttt{\textsc{nyc}}}}
@@ -18,7 +20,6 @@
 %\frontmatter
 \maketitle
 \tableofcontents
-\include{./glossary}
 %\mainmatter
 \part{General}
 \include{./G/AEP}%Acceptable Encryption Policy
@@ -34,19 +35,19 @@
 \include{./G/PPP}%Password Protection Policy
 \include{./G/SRPP}%Security Response Plan Policy
 \include{./G/EUEKPP}%End User Encryption Key Protection Policy
-%\part{Network Security}
-%\include{./NS/AAP}%Acquisition Assessment Policy
-%\include{./NS/BBRP}%Bluetooth Baseline Requirements Policy
-%\include{./NS/RAP}%Remote Access Policy
-%\include{./NS/RATP}%Remote Access Tools Policy
-%\include{./NS/RaSSP}%Router and Switch Security Policy
-%\include{./NS/WCP}%Wireless Communication Policy
-%\include{./NS/WCS}%Wireless Communication Standard
-%\part{Server Security}
-%\include{./SS/DCP}%Database Credentials Policy
+\part{Network Security}
+\include{./NS/AAP}%Acquisition Assessment Policy
+\include{./NS/BBRP}%Bluetooth Baseline Requirements Policy
+\include{./NS/RAP}%Remote Access Policy
+\include{./NS/RATP}%Remote Access Tools Policy
+\include{./NS/RaSSP}%Router and Switch Security Policy
+\include{./NS/WCP}%Wireless Communication Policy
+\include{./NS/WCS}%Wireless Communication Standard
+\part{Server Security}
+\include{./SS/DCCP}%Database Credentials Policy
 %\include{./SS/TEDP}%Technology Equipment Disposal Policy
 %\include{./SS/ILS}%Information Logging Standard
-%\include{./SS/LSP}%Lab Security Policy
+\include{./SS/LSP}%Lab Security Policy
 %\include{./SS/SSP}%Server Security Policy
 %\include{./SS/SIP}%Software Installation Policy
 %\include{./SS/WSfHP}%Workstation Security (For HIPAA) Policy
@@ -80,6 +81,6 @@
 %
 %\backmatter
 %% bibliography, glossary and index would go here.
-\glsaddall
+%\printindex
 \printglossaries
 \end{document}

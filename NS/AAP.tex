@@ -1,0 +1,83 @@
+\chapter{Acquisition Assessment Policy}\label{NS:AAP}
+\CommonIntroduction
+\section{Overview}
+The process of integrating a newly acquired company can have a drastic impact on the security poster of either the parent company or the child company.  
+The network and security infrastructure of both entities may vary greatly and the workforce of the new company may have a drastically different culture and tolerance to openness.  
+The goal of the security acquisition assessment and integration process should include:
+\begin{itemize}
+\item
+Assess company's security landscape, posture, and policies
+\item
+Protect both \CompanyName{} and the acquired company from increased security risks
+\item 
+Educate acquired company about \CompanyName{} policies and standard
+\item
+Adopt and implement \CompanyName{} security policies and standards
+\item
+Integrate acquired company
+\item
+Continuous monitoring and auditing of the acquisition
+\end{itemize}
+\section{Purpose}
+The purpose of this policy is to establish \gls{infosec} responsibilities regarding corporate acquisitions, and define the minimum security requirements of an \gls{infosec} acquisition assessment.
+\section{Scope}
+This policy applies to all companies acquired by \CompanyName{} and pertains to all systems, networks, laboratories, test equipment, hardware, software and firmware, owned and/or operated by the acquired company.
+\section{Policy}
+\subsection{General}
+Acquisition assessments are conducted to ensure that a company being acquired by \CompanyName{} does not pose a security risk to corporate networks, internal systems, and/or confidential/sensitive information.  
+The \gls{infosec} Team will provide personnel to serve as active members of the acquisition team throughout the entire acquisition process.  
+The \gls{infosec} role is to detect and evaluate information security risk, develop a remediation plan with the affected parties for the identified risk, and work with the acquisitions team to implement solutions for any identified security risks, prior to allowing connectivity to \CompanyName{}'s networks.  
+Below are the minimum requirements that the acquired company must meet before being connected to the \CompanyName{} network. 
+\subsection{Requirements}
+\subsubsection{Hosts}
+\begin{enumerate}
+\item
+All hosts (servers, desktops, laptops) will be replaced or re-imaged with a \CompanyName{} standard image or will be required to adopt the minimum standards for end user devices.
+\item
+Business critical production servers that cannot be replaced or re-imaged must be audited and a waiver granted by \gls{infosec}.
+\item
+All PC based hosts will require \CompanyName{} approved virus protection before the network connection. 
+\end{enumerate}
+\subsubsection{Networks}
+\begin{enumerate}
+\item
+All network devices will be replaced or re-imaged with a \CompanyName{} standard image. 
+\item
+Wireless network access points will be configured to the \CompanyName{} standard. 
+\end{enumerate}
+\subsubsection{Internet}
+\begin{enumerate}
+\item
+All Internet connections will be terminated. 
+\item
+When justified by business requirements, air-gapped Internet connections require \gls{infosec} review and approval. 
+\end{enumerate}
+\subsubsection{Remote Access}
+\begin{enumerate}
+\item
+All remote access connections will be terminated. 
+\item
+Remote access to the production network will be provided by \CompanyName{}.
+\end{enumerate}
+\subsubsection{Labs}
+\begin{enumerate}
+\item 
+Lab equipment must be physically separated and secured from non-lab areas. 
+\item 
+The lab network must be separated from the corporate production network with a firewall between the two networks. 
+\item 
+Any direct network connections (including analog lines, \gls{isdn} lines, T1, \etc) to external customers, partners, \etc, must be reviewed and approved by the \gls{labsec}.
+\item 
+All acquired labs must meet with \gls{labsec} \hyperref[SS:LSP]{lab policy}, or be granted a waiver by \gls{labsec}. 
+\item 
+In the event the acquired networks and computer systems being connected to the corporate network fail to meet these requirements, the \CompanyName{} \gls{cio} must acknowledge and approve of the risk to \CompanyName{}'s networks 
+\end{enumerate}
+\CommonPolicyCompliance
+\section{Related Standards, Policies\oxford{} and Processes}
+None.
+\CommonDefinitionsAndTerms
+\begin{itemize}
+\item 
+Business Critical Production Server
+\end{itemize}
+\CommonRevisionHistory

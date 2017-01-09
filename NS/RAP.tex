@@ -1,0 +1,88 @@
+\chapter{Remote Access Policy}\label{NS:RAP}
+%No Introduction
+\section{Overview}
+Remote access to our corporate network is essential to maintain our Team's productivity, but in many cases this remote access originates from networks that may already be compromised or are at a significantly lower security posture than our corporate network.  
+While these remote networks are beyond the control of \CompanyName{} policy, we must mitigate these external risks the best of our ability.
+
+\section{Purpose}
+The purpose of this policy is to define rules and requirements for connecting to \CompanyName{}'s network from any host.  
+These rules and requirements are designed to minimize the potential exposure to \CompanyName{} from damages which may result from unauthorized use of \CompanyName{} resources.  
+Damages include the loss of sensitive or company confidential data, intellectual property, damage to public image, damage to critical \CompanyName{} internal systems\oxford{} and fines or other financial liabilities incurred as a result of those losses.
+
+\section{Scope}
+This policy applies to all \CompanyName{} employees, contractors, vendors\oxford{} and agents with a \CompanyName{}-owned or personally-owned computer or workstation used to connect to the \CompanyName{} network.  
+This policy applies to remote access connections used to do work on behalf of \CompanyName{}, including reading or sending email and viewing intranet web resources.  
+This policy covers any and all technical implementations of remote access used to connect to \CompanyName{} networks.
+
+\section{Policy}
+It is the responsibility of \CompanyName{} employees, contractors, vendors\oxford{} and agents with remote access privileges to \CompanyName{}'s corporate network to ensure that their remote access connection is given the same consideration as the user's on-site connection to \CompanyName{}. 
+
+General access to the Internet for recreational use through the \CompanyName{} network is strictly limited to \CompanyName{} employees, contractors, vendors\oxford{} and agents (hereafter referred to as \q{Authorized Users}).  
+When accessing the \CompanyName{} network from a personal computer, Authorized Users are responsible for preventing access to any \CompanyName{} computer resources or data by non-Authorized Users.  
+Performance of illegal activities through the \CompanyName{} network by any user (Authorized or otherwise) is prohibited.  
+The Authorized User bears responsibility for and consequences of misuse of the Authorized User's access.  
+For further information and definitions, see \oldnew{the Acceptable Use Policy}{\see{G:AUP}}.
+
+Authorized Users will not use \CompanyName{} networks to access the Internet for outside business interests.
+
+For additional information regarding \CompanyName{}'s remote access connection options, including how to obtain a remote access login, \del{free }\gls{av}, troubleshooting, \etc, \oldnew{go to the Remote Access Services website (company url)}{refer to \CompanyName{}'s Remote Access Administrator.}. 
+
+\subsection{Requirements}
+\begin{enumerate}
+\item
+Secure remote access must be strictly controlled with encryption (\ie, \gls{vpn}s) and strong pass-phrases.  
+For further information see \see{G:AEP} and the \oldnew{password policy}{\PasswordPolicies}.  
+\item
+Authorized Users shall protect their login and password, even from family members. 
+\item
+While using a \CompanyName{}-owned computer to remotely connect to \CompanyName{}'s corporate network, Authorized Users shall ensure the remote host is not connected to any other network at the same time, with the exception of personal networks that are under their complete control or under the complete control of an Authorized User or Third Party. 
+\item 
+Use of external resources to conduct \CompanyName{} business must be approved in advance by \gls{infosec} and the appropriate business unit manager.
+\item 
+All hosts that are connected to \CompanyName{} internal networks via remote access technologies must use the most up-to-date \gls{av} \oldnew{(place url to corporate software site here)}{as perscribed by the \gls{infosec} team}, \del{this } includ\oldnew{es}{ing} personal computers.  
+Third party connections must comply with requirements as stated in the Third Party Agreement. 
+\item
+Personal equipment used to connect to \CompanyName{}'s networks must meet the requirements of \CompanyName{}-owned equipment for remote access as stated in the Hardware and Software Configuration Standards for Remote Access to \CompanyName{} Networks. 
+\end{enumerate}
+\section{Policy Compliance}
+\subsection{Compliance Measurement}
+The \gls{infosec} team will verify compliance to this policy through various methods, including but not limited to, periodic walk-thr\ins{o}u\ins{ghs}, video monitoring, business tool reports, internal and external audits, inspection, and will provide feedback to the policy owner.
+\subsection{Exceptions}
+Any exception to the policy must be approved by the Remote Access Service Administrator and the \gls{infosec} team in advance.
+\subsection{Non-Compliance}
+An employee found to have violated this policy may be subject to disciplinary action, up to and including termination of employment. 
+\section{Related Standards, Policies\oxford{} and Processes}
+Please review the following policies for details of protecting information when accessing the corporate network via remote access methods, and acceptable use of \CompanyName{}'s network:
+\begin{itemize}
+\item \see{G:AEP}
+\item \see{G:AUP}
+\item \del{Password Policy}
+\item \ins{\see{G:PCG}}
+\item \ins{\see{G:PPP}}
+\item Third Party Agreement
+\item Hardware and Software Configuration Standards for Remote Access to \CompanyName{} Networks
+\end{itemize}
+\section{Revision History}
+\begin{tabular}{|p{1.25in}|p{1.25in}|p{3in}|}
+\hline
+	Date of Change&
+	Responsible&
+	Summary of Change\\
+\hline
+	June 2014&
+	SANS Policy Team&
+	Updated and converted to new format.\\
+\hline
+	April 2015&
+	Christopher Jarko&
+	Added an Overview; created a group term for company employees, contractors, etc. (\q{Authorized Users}); strengthened the policy by explicitly limiting use of company resources to Authorized Users only; combined Requirements when possible, or eliminated Requirements better suited for a Standard (and added a reference to that Standard); consolidated list of related references to end of Policy.\\
+\hline
+	Dec. 2016\newline{}Jan. 2017&
+	\xio{}&
+	Conversion to \LaTeX{}.\\
+\hline
+	 &
+	 &
+	 \\
+\hline
+\end{tabular}

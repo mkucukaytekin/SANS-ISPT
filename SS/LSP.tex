@@ -1,0 +1,156 @@
+\chapter{Lab Security Policy}\label{SS:LSP}
+\CommonIntroduction
+\section{Overview}
+See \see{SS:LSP:Pu}
+\section{Purpose}\label{SS:LSP:Pu}
+This policy establishes the information security requirements to help manage and safeguard lab resources and \CompanyName{} networks by minimizing the exposure of critical infrastructure and information assets to threats that may result from unprotected hosts and unauthorized access.
+\section{Scope}
+This policy applies to all employees, contractors, consultants, temporary\oxford{} and other workers at \CompanyName{} and its subsidiaries must adhere to this policy.  
+This policy applies to \CompanyName{} owned and managed labs, including labs outside the corporate firewall (\gls{dmz}). 
+\section{Policy}
+\subsection{General Requirements}
+\begin{enumerate}
+\item
+Lab owning organizations are responsible for assigning lab managers, a \gls{ptoc}, and a back-up \gls{ptoc} for each lab.  
+Lab owners must maintain up-to-date \gls{ptoc} information with \gls{infosec} and the Corporate Enterprise Management Team.  
+Lab managers or their backup must be available around-the-clock for emergencies, otherwise actions will be taken without their involvement.
+\item
+Lab managers are responsible for the security of their labs and the lab's impact on the corporate production network and any other networks.  
+Lab managers are responsible for adherence to this policy and associated processes.  
+Where policies and procedures are undefined lab managers must do their best to safeguard \CompanyName{} from security vulnerabilities.
+\item
+Lab managers are responsible for the lab's compliance with all \CompanyName{} security policies. 
+\item
+The Lab Manager is responsible for controlling lab access.  
+Access to any given lab will only be granted by the lab manager or designee\del{,} to those individuals with an immediate business need within the lab, either short-term or as defined by their ongoing job function.  
+This includes continually monitoring the access list to ensure that those who no longer require access to the lab have their access terminated.
+\item
+All user passwords must comply with \CompanyName{}'s \oldnew{\textit{Password Policy}}{password policies (see \see{G:PCG} and \see{G:PPP})}. 
+\item
+Individual user accounts on any lab device must be deleted when no longer authorized within three (3) days.  
+Group account passwords on lab computers (Unix, \oldnew{w}{W}indows, \ins{Mac OS, }\etc) must be changed quarterly (once every 3 months). 
+\item
+PC-based lab computers must have \CompanyName{}'s standard, supported anti-virus software installed and scheduled to run at regular intervals.  
+In addition, the anti-virus software and the virus pattern files must be kept up-to-date.  
+Virus-infected computers must be removed from the network until they are verified as virus-free.  
+Lab Admins/Lab Managers are responsible for creating procedures that ensure anti-virus software is run at regular intervals, and computers are verified as virus-free.
+\item
+Any activities with the intention to create and/or distribute malicious programs into \CompanyName{}'s networks (\eg, viruses, worms, Trojan horses, \email{} bombs, \etc) are prohibited, in accordance with \oldnew{the Acceptable Use Policy}{\see{G:AUP}}. 
+\item
+No lab shall provide production services.  
+Production services are defined as ongoing and shared business critical services that generate revenue streams or provide customer capabilities.  
+These should be managed by a \ProperSupportOrganization{}.
+\item
+In accordance with the \textit{Data Classification Policy}, information that is marked as \CompanyName{} Highly Confidential or \CompanyName{} Restricted is prohibited on lab equipment.
+\item
+Immediate access to equipment and system logs must be granted to members of \gls{infosec} and the \gls{nso} upon request, in accordance with the Audit Policy.
+\item
+\gls{infosec} will address non-compliance waiver requests on a case-by-case basis and approve waivers if justified.
+\end{enumerate}
+\subsection{Internal Lab Security Requirements}
+\begin{enumerate}
+\item
+The \gls{nso} must maintain a firewall device between the corporate production network and all lab equipment.
+\item
+The \gls{nso} and/or \gls{infosec} reserve the right to interrupt lab connections that impact the corporate production network negatively or pose a security risk.
+\item
+The \gls{nso} must record all lab IP addresses, which are routed within \CompanyName{} networks, in Enterprise Address Management database along with current contact information for that lab.
+\item
+Any lab that wants to add an external connection must provide a diagram and documentation to \gls{infosec} with business justification, the equipment, and the IP address space information.  
+\gls{infosec} will review for security concerns and must approve before such connections are implemented.
+\item
+All traffic between the corporate production and the lab network must go through a \gls{nso} maintained firewall.  
+Lab network devices (including wireless) must not cross-connect the lab and production networks.
+\item
+Original firewall configurations and any changes thereto must be reviewed and approved by \gls{infosec}.  
+\gls{infosec} may require security improvements as needed.
+\item
+Labs are prohibited from engaging in port scanning, network auto-discovery, traffic spamming/flooding, and other similar activities that negatively impact the corporate network and/or non-\CompanyName{} networks.  
+These activities must be restricted within the lab.
+\item
+Traffic between production networks and lab networks, as well as traffic between separate lab networks, is permitted based on business needs and as long as the traffic does not negatively impact on other networks.  
+Labs must not advertise network services that may compromise production network services or put lab confidential information at risk.
+\item
+\gls{infosec} reserves the right to audit all lab-related data and administration processes at any time, including but not limited to, inbound and outbound packets, firewalls and network peripherals.
+\item
+Lab owned gateway devices are required to comply with all \CompanyName{} product security advisories and must authenticate against the Corporate Authentication servers.
+\item
+The enable password for all lab owned gateway devices must be different from all other equipment passwords in the lab. 
+The password must be in accordance with \CompanyName{}'s \PasswordPolicies{}.  
+The password will only be provided to those who are authorized to administer the lab network.
+\item
+In labs where non-\CompanyName{} personnel have physical access (\eg, training labs), direct connectivity to the corporate production network is not allowed.  
+Additionally, no \CompanyName{} confidential information can reside on any computer equipment in these labs.  
+Connectivity for authorized personnel from these labs can be allowed to the corporate production network only if authenticated against the Corporate Authentication servers, temporary access lists (lock and key), SSH, client VPNs, or similar technology approved by \gls{infosec}.
+\item
+Lab networks with external connections are prohibited from connecting to the corporate production network or other internal networks through a direct connection, wireless connection, or other computing equipment.
+\end{enumerate}
+\subsection{\gls{dmz} Lab Security Requirements}
+\begin{enumerate}
+\item
+New \gls{dmz} labs require a business justification and VP-level approval from the business unit.  
+Changes to the connectivity or purpose of an existing \gls{dmz} lab must be reviewed and approved by the \gls{infosec} Team. 
+\item
+\gls{dmz} labs must be in a physically separate room, cage, or secured lockable rack with limited access.  
+In addition, the Lab Manager must maintain a list of who has access to the equipment.
+\item
+\gls{dmz} lab \gls{ptoc}s must maintain network devices deployed in the \gls{dmz} lab up to the network support organization point of demarcation.
+\item
+\gls{dmz} labs must not connect to corporate internal networks, either directly, logically (for example, \gls{ipsec} tunnel), through a wireless connection, or multi-homed machine.
+\item
+An approved network support organization must maintain a firewall device between the \gls{dmz} lab and the Internet.  
+Firewall devices must be configured based on least privilege access principles and the \gls{dmz} lab business requirements.  
+Original firewall configurations and subsequent changes must be reviewed and approved by the \gls{infosec} Team.  
+All traffic between the \gls{dmz} lab and the Internet must go through the approved firewall.  
+Cross-connections that bypass the firewall device are strictly prohibited.
+\item
+All routers and switches not used for testing and/or training must conform to the \gls{dmz} \hyperref[NS:RaSSP]{Router and Switch standardization} documents. 
+\item
+Operating systems of all hosts internal to the \gls{dmz} lab running Internet Services must be configured to the secure host installation and configuration standards published the \gls{infosec} Team.
+\item
+Remote administration must be performed over secure channels (for example, encrypted network connections using \gls{ssh} or \gls{ipsec}) or console access independent from the \gls{dmz} networks.
+\item
+\gls{dmz} lab devices must not be an open proxy to the Internet. 
+\item
+The \gls{nso} and \gls{infosec} reserve the right to interrupt lab connections if a security concern exists. 
+\end{enumerate}
+\CommonPolicyCompliance
+\section{Related Standards, Policies\oxford{} and Processes}
+\begin{itemize}
+\item 
+Audit Policy
+\item 
+\hyperref[G:AUP]{Acceptable Use Policy}
+\item 
+Data Classification Policy
+\item \del{Password Policy}
+\item \ins{\hyperref[G:PCG]{Password Construction Guidelines}}
+\item \ins{\hyperref[G:PPP]{Password Protection Policy}}
+\end{itemize}
+\CommonDefinitionsAndTerms
+\begin{itemize}
+\item 
+\gls{dmz}
+\item 
+Firewall
+\end{itemize}
+\section{Revision History}
+\begin{tabular}{|p{1.25in}|p{1.25in}|p{3in}|}
+\hline
+	Date of Change&
+	Responsible&
+	Summary of Change\\
+\hline
+	June 2014&
+	SANS Policy Team&
+	Updated, made general lab and included DMZ lab requirements, and converted to new format.\\
+\hline
+	Dec. 2016\newline{}Jan. 2017&
+	\xio{}&
+	Conversion to \LaTeX{}.\\
+\hline
+	 &
+	 &
+	 \\
+\hline
+\end{tabular}

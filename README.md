@@ -17,19 +17,19 @@ See https://www.sans.org/security-resources/policies for more information.
 	* ✓ Password Protection Policy
 	* ✓ Security Response Plan Policy
 	* ✓ End User Encryption Key Protection Policy
-* Network Security
-	* Acquisition Assessment Policy
-	* Bluetooth Baseline Requirements Policy
-	* Remote Access Policy
-	* Remote Access Tools Policy
-	* Router and Switch Security Policy
-	* Wireless Communication Policy
-	* Wireless Communication Standard
+* ✓ Network Security
+	* ✓ Acquisition Assessment Policy
+	* ✓ Bluetooth Baseline Requirements Policy
+	* ✓ Remote Access Policy
+	* ✓ Remote Access Tools Policy
+	* ✓ Router and Switch Security Policy
+	* ✓ Wireless Communication Policy
+	* ✓ Wireless Communication Standard
 * Server Security
-	* Database Credentials Policy
+	* ✓ Database Credentials Policy
 	* Technology Equipment Disposal Policy
 	* Information Logging Standard
-	* Lab Security Policy
+	* ✓ Lab Security Policy
 	* Server Security Policy
 	* Software Installation Policy
 	* Workstation Security (For HIPAA) Policy

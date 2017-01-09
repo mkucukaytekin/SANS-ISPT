@@ -1,0 +1,63 @@
+\chapter{Wireless Communication Standard}\label{NS:WCS}
+\CommonIntroduction
+\section{Overview}
+See \see{NS:WCS:Pu}.
+\section{Purpose}\label{NS:WCS:Pu}
+This standard specifies the technical requirements that wireless infrastructure devices must satisfy to connect to a \CompanyName{} network.  
+Only those wireless infrastructure devices that meet the requirements specified in this standard or are granted an exception by the \gls{infosec} Team are approved for connectivity to a \CompanyName{} network.
+
+Network devices including, but not limited to, hubs, routers, switches, firewalls, remote access devices, modems\oxford{} or \glspl{wap}, must be installed, supported\oxford{} and maintained by an \gls{infosec} approved support organization.  
+Lab network devices must comply with \oldnew{the Lab Security Policy}{\see{NS:LSP}}.
+\section{Scope}
+All employees, contractors, consultants, temporary\oxford{} and other workers at \CompanyName{} and its subsidiaries, including all personnel that maintain a wireless infrastructure device on behalf of \CompanyName{}, must comply with this standard.  
+This standard applies to wireless devices that make a connection the network and all wireless infrastructure devices that provide wireless connectivity to the network.
+
+\gls{infosec} must approve exceptions to this standard in advance. 
+\section{Standard}
+\subsection{General Requirements}
+All wireless infrastructure devices that connect to a \CompanyName{} network or provide access to \CompanyName{} Confidential, \CompanyName{} Highly Confidential\oxford{} or \CompanyName{} Restricted information must:
+\begin{itemize}
+\item
+Use \gls{eapfast}, \gls{peap}\oxford{} or \gls{eaptls} as the authentication protocol.
+\item
+Use \gls{tkip} or \gls{aesys} protocols with a minimum key length of 128 bits.
+\item
+All Bluetooth devices must use Secure Simple Pairing with encryption enabled.
+\end{itemize}
+\subsection{Lab and Isolated Wireless Device Requirements}
+\begin{itemize}
+\item
+Lab device \glspl{ssid} must be different from \CompanyName{} production device \glspl{ssid}.
+\item
+Broadcast of lab device \glspl{ssid} must be disabled.
+\end{itemize}
+\subsection{Home Wireless Device Requirements}
+All home wireless infrastructure devices that provide direct access to a \CompanyName{} network, such as those behind \gls{ect} or hardware \gls{vpn}, must adhere to the following: 
+\begin{itemize}
+\item
+Enable \gls{wpapsk}, \gls{eapfast}, \gls{peap}\oxford{} \gls{eaptls}.
+\item
+When enabling \gls{wpapsk}, configure a complex shared secret key (at least 20 characters) on the wireless client and the \gls{wap}.
+\item
+Disable broadcast of \gls{ssid}
+\item
+Change the default \gls{ssid} name
+\item
+Change the default login and password
+\end{itemize}
+\CommonPolicyCompliance
+\section{Related Standards, Policies\oxford{} and Processes}
+\begin{itemize}
+\item \see{SS:LSP}
+\end{itemize}
+\CommonDefinitionsAndTerms
+\begin{itemize}
+\item \gls{aesys}
+\item \gls{eapfast}
+\item \gls{eaptls}
+\item \gls{peap}
+\item \gls{ssid}
+\item \gls{tkip}
+\item \gls{wpapsk}
+\end{itemize}
+\CommonRevisionHistory

@@ -1,0 +1,45 @@
+\chapter{Remote Access Tools Policy}
+\CommonIntroduction
+\section{Overview}
+Remote desktop software, also known as remote access tools, provide a way for computer users and support staff alike to share screens, access work computer systems from home, and vice versa.  
+Examples of such software include \href{https://secure.logmein.com/home/en}{LogMeIn}, \href{https://get.gotomypc.com/}{GoToMyPC}, \href{https://en.wikipedia.org/wiki/Virtual_Network_Computing}{\gls{vnc}}, and \href{https://msdn.microsoft.com/en-us/library/aa383015(v=vs.85).aspx}{Windows \gls{rdp}}.  
+While these tools can save significant time and money by eliminating travel and enabling collaboration, they also provide a \backdoor{} into the \CompanyName{} network that can be used for theft of, unauthorized access to\oxford{} or destruction of assets.  
+As a result, only approved, monitored\oxford{} and properly controlled remote access tools may be used on \CompanyName{} computer systems.
+
+\section{Purpose}
+This policy defines the requirements for remote access tools used at \CompanyName{}.
+\section{Scope}
+This policy applies to all remote access where either end of the communication terminates at a \CompanyName{} computer asset.
+\section{Policy}
+All remote access tools used to communicate between \CompanyName{} assets and other systems must comply with the following policy requirements.
+
+\subsection{Remote Access Tools}
+\CompanyName{} provides mechanisms to collaborate between internal users, with external partners\oxford{} and from non-\CompanyName{} systems.  
+The approved software list can be obtained from \oldnew{<link-to-approved-remote-access-software-list>}{the Remote Access Administrator and \gls{infosec}}.  
+Because proper configuration is important for secure use of these tools, mandatory configuration procedures are provided for each of the approved tools.
+
+The approved software list may change at any time, but the following requirements will be used for selecting approved products:
+\begin{enumerate}
+\item
+All remote access tools or systems that allow communication to \CompanyName{} resources from the Internet or external partner systems must require multi-factor authentication.  
+Examples include authentication tokens and \smartcard{}s that require an additional \gls{pin} or password.
+\item
+The authentication database source must be \gls{ad} or \gls{ldap}, and the authentication protocol must involve a challenge-response protocol that is not susceptible to replay attacks.  
+The remote access tool must mutually authenticate both ends of the session.
+\item
+Remote access tools must support the \CompanyName{} application layer proxy rather than direct connections through the perimeter firewall(s).
+\item
+Remote access tools must support strong, end-to-end encryption of the remote access communication channels as specified in the \CompanyName{} network encryption protocols policy.
+\item
+All \CompanyName{} \gls{av}, \gls{dlprev}\oxford{} and other security systems must not be disabled, interfered with\oxford{} or circumvented in any way.
+\end{enumerate}
+
+All remote access tools must be purchased through the standard \CompanyName{} procurement process, and the \gls{it} group must approve the purchase.
+\CommonPolicyCompliance
+\section{Related Standards, Policies\oxford{} and Processes}
+None.
+\CommonDefinitionsAndTerms
+\begin{itemize}
+\item Application Layer Proxy
+\end{itemize}
+\CommonRevisionHistory
