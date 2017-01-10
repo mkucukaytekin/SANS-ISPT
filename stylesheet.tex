@@ -22,6 +22,11 @@
 \newcommand\ie{i.e.\@ifnextchar.{}{.\@}}
 \makeatother
 
+%	"versus"
+\makeatletter
+\newcommand\vs{vs.\@ifnextchar.{}{.\@}}
+\makeatother
+
 %	Include the "-" if you're old-fasioned; omit the "-" if you're newfangled.
 \newcommand{\email}{e-mail}
 \newcommand{\Email}{E-mail}
@@ -31,6 +36,9 @@
 \newcommand{\hypertext}{hyper-text}
 \newcommand{\Hypertext}{Hyper-text}
 \newcommand{\HyperText}{Hyper-Text}
+
+\newcommand{\cellphone}{cell-phone}
+\newcommand{\Cellphone}{Cell-phone}
 
 \newcommand{\smartphone}{smart-phone}
 \newcommand{\Smartphone}{Smart-phone}
@@ -43,12 +51,16 @@
 \newcommand{\passthrough}{pass-through}
 \newcommand{\Passthrough}{Pass-through}
 
+\newcommand{\handheld}{hand-held}
+\newcommand{\Handheld}{Hand-held}
+
 
 %	Insert a "~" if you believe these should be two words; "-" if you believe these should be a compunded-word; or collapse it if you like runon words.
 \newcommand{\smartcard}{smart~card}
 \newcommand{\plaintext}{plain~text}
 \newcommand{\Plaintext}{Plain~text}
 \newcommand{\backdoor}{back~door}
+\newcommand{\timezone}{time~zone}
 
 %	Intradocument links
 \newcommand{\see}[1]{\hyperref[#1]{\ref{#1} \textsl{\nameref{#1}}}}

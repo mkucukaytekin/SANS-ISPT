@@ -1,0 +1,99 @@
+\chapter{Information Logging Standard}
+\CommonIntroduction
+\section{Overview}
+Logging from critical systems, applications and services can provide key information and potential indicators of compromise.  
+Although logging information may not be viewed on a daily basis, it is critical to have from a forensics standpoint. 
+\section{Purpose}
+The purpose of this document attempts to address this issue by identifying specific requirements that information systems must meet in order to generate appropriate audit logs and integrate with an enterprise's log management function.  
+The intention is that this language can easily be adapted for use in enterprise \gls{it} security policies and standards, and also in enterprise procurement standards and \gls{rfp} templates.  
+In this way, organizations can ensure that new \gls{it} systems, whether developed in-house or procured, support necessary audit logging and log management functions.
+\section{Scope}
+This policy applies to all production systems on \CompanyName{} Network. 
+\section{Standard}
+\subsection{General Requirements}
+All systems that handle confidential information, accept network connections, or make access control (authentication and authorization) decisions shall record and retain audit-logging information sufficient to answer the following questions:
+\begin{enumerate}
+\item
+What activity was performed?
+\item
+Who or what performed the activity, including where or on what system the activity was performed from (subject)?
+\item
+What the activity was performed on (object)?
+\item
+When was the activity performed?
+\item
+What tool(s) was the activity was performed with?
+\item
+What was the status (such as success \vs{} failure), outcome\oxford{} or result of the activity?
+\end{enumerate}
+\subsection{Activities to be Logged}
+Therefore, logs shall be created whenever any of the following activities are requested to be performed by the system:
+\begin{enumerate}
+\item\label{SS:ILS:S:AtbL:1}
+Create, read, update\oxford{} or delete confidential information, including confidential authentication information such as passwords;
+\item\label{SS:ILS:S:AtbL:2}
+Create, update\oxford{} or delete information not covered in \see{SS:ILS:S:AtbL:1};%TODO Better Enumeration
+\item
+Initiate a network connection;
+\item
+Accept a network connection;
+\item
+User authentication and authorization for activities covered in \see{SS:ILS:S:AtbL:1} or \see{SS:ILS:S:AtbL:2} such as user login and logout;%TODO Better Enumeration
+\item
+Grant, modify\oxford{} or revoke access rights, including adding a new user or group, changing user privilege levels, changing file permissions, changing database object permissions, changing firewall rules\oxford{} and user password changes;
+\item
+System, network\oxford{} or services configuration changes, including installation of software patches\oldnew{ and}{,} updates\oldnew{,}{\oxford} or other installed software changes;
+\item
+Application process startup, shutdown\oxford{} or restart;
+\item
+Application process abort, failure\oxford{} or abnormal end, especially due to resource exhaustion or reaching a resource limit or threshold (such as for \gls{cpu}, memory, network connections, network bandwidth, disk space\oxford{} or other resources), the failure of network services such as \gls{dhcp} or \gls{dns}, or hardware fault; and
+\item
+Detection of suspicious/malicious activity such as from an \gls{ids} or \gls{ids}, \gls{av}, or anti-spyware system.
+\end{enumerate}
+\subsection{Elements of the Log}
+Such logs shall identify or contain at least the following elements, directly or indirectly.  
+In this context, the term \q{indirectly} means unambiguously inferred.
+\begin{enumerate}
+\item
+Type of action\newline{}
+Examples include authorize, create, read, update, delete\oxford{} and accept network connection.
+\item
+Subsystem performing the action\newline{}
+Examples include process or transaction name, process\oxford{} or transaction identifier.
+\item
+Identifiers (as many as available) for the subject requesting the action\newline{}
+Examples include user name, computer name, \gls{ip} address\oxford{} and \gls{mac} address.  
+Note that such identifiers should be standardized in order to facilitate log correlation.
+\item
+Identifiers (as many as available) for the object the action was performed on\newline{}
+Examples include file names accessed, unique identifiers of records accessed in a database, query parameters used to determine records accessed in a database, computer name, \gls{ip} address\oxford{} and \gls{mac} address.  
+Note that such identifiers should be standardized in order to facilitate log correlation.
+\item
+Before and after values when action involves updating a data element, if feasible.
+\item
+Date and time the action was performed, including relevant \timezone{} information if not in \gls{utc}.
+\item
+Whether the action was allowed or denied by access-control mechanisms.
+\item
+Description and/or reason-codes of why the action was denied by the access-control mechanism, if applicable.
+\end{enumerate}
+\subsection{Formatting and Storage}
+The system shall support the formatting and storage of audit logs in such a way as to ensure the integrity of the logs and to support enterprise-level analysis and reporting.  
+Note that the construction of an actual enterprise-level log management mechanism is outside the scope of this document.  
+Mechanisms known to support these goals include but are not limited to the following:
+\begin{enumerate}
+\item
+Microsoft Windows Event Logs collected by a centralized log management system;
+\item
+Logs in a well-documented format sent via \texttt{syslog}, \texttt{syslog-ng}\oxford{} or \texttt{syslog-reliable} network protocols to a centralized log management system;
+\item
+Logs stored in an \gls{ansi} \gls{sql} database that itself generates audit logs in compliance with the requirements of this document; and
+\item
+Other open logging mechanisms supporting the above requirements including those based on CheckPoint OpSec, ArcSight CEF, and \gls{idmef}.
+\end{enumerate}
+\CommonPolicyCompliance
+\section{Related Standards, Policies\oxford{} and Processes}
+None.
+\section{Definitions and Terms}
+None.
+\CommonRevisionHistory

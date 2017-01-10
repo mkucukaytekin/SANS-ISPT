@@ -8,8 +8,8 @@
 \include{./stylesheet}
 
 \makeindex
-\makeglossaries
 \loadglsentries{./glossary}
+\makeglossaries
 
 \begin{document}
 \newcommand{\xio}{\textsf{\textbf{x\i{}o}\texttt{\textsc{nyc}}}}
@@ -45,12 +45,12 @@
 \include{./NS/WCS}%Wireless Communication Standard
 \part{Server Security}
 \include{./SS/DCCP}%Database Credentials Policy
-%\include{./SS/TEDP}%Technology Equipment Disposal Policy
-%\include{./SS/ILS}%Information Logging Standard
+\include{./SS/TEDP}%Technology Equipment Disposal Policy
+\include{./SS/ILS}%Information Logging Standard
 \include{./SS/LSP}%Lab Security Policy
-%\include{./SS/SSP}%Server Security Policy
-%\include{./SS/SIP}%Software Installation Policy
-%\include{./SS/WSfHP}%Workstation Security (For HIPAA) Policy
+\include{./SS/SSP}%Server Security Policy
+\include{./SS/SIP}%Software Installation Policy
+\include{./SS/WSfHP}%Workstation Security (For HIPAA) Policy
 \part{Application Security}
 \include{./AS/WASP}%Web Application Security Policy
 %\part{Old/Retired}
@@ -82,5 +82,6 @@
 %\backmatter
 %% bibliography, glossary and index would go here.
 %\printindex
+\glsaddall
 \printglossaries
 \end{document}

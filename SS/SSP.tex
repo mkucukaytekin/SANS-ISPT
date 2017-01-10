@@ -1,0 +1,105 @@
+\chapter{Server Security Policy}
+\CommonIntroduction
+\section{Overview}
+Unsecured and vulnerable servers continue to be a major entry point for malicious threat actors.  
+Consistent server installation policies, ownership and configuration management are all about doing the basics well. 
+\section{Purpose}
+The purpose of this policy is to establish standards for the base configuration of internal server equipment that is owned and/or operated by \CompanyName{}.  
+Effective implementation of this policy will minimize unauthorized access to \CompanyName{} proprietary information and technology.
+\section{Scope}
+All employees, contractors, consultants, temporary\oxford{} and other workers at \oldnew{Cisco}{\CompanyName} and its subsidiaries must adhere to this policy.  
+This policy applies to server equipment that is owned, operated\oxford{} or leased by \oldnew{Cisco}{\CompanyName} or registered under a \oldnew{Cisco}{\CompanyName}-owned internal network domain. 
+This policy specifies requirements for equipment on the internal \oldnew{Cisco}{\CompanyName} network.  
+\del{For secure configuration of equipment external to \oldnew{Cisco}{\CompanyName} on the \gls{dmz}, see the \textit{Internet DMZ Equipment Policy.}}%TODO DMZ Policy (DMZ Lab Security Policy is old/retired
+\section{Policy}
+\subsection{General Requirements}
+\begin{enumerate}
+\item
+All internal servers deployed at \CompanyName{} must be owned by an operational group that is responsible for system administration.  
+Approved server configuration guides must be established and maintained by each operational group, based on business needs and approved by \gls{infosec}.  
+Operational groups should monitor configuration compliance and implement an exception policy tailored to their environment.  
+Each operational group must establish a process for changing the configuration guides, which includes review and approval by \gls{infosec}.  
+The following items must be met:
+\begin{itemize}
+\item
+Servers must be registered within the corporate enterprise management system.  
+At a minimum, the following information is required to positively identify the \gls{ptoc}: 
+\begin{itemize}
+\item
+Server contact(s) and location, and a backup contact 
+\item
+Hardware \ins{make and model, }and \oldnew{O}{o}perating \oldnew{S}{s}ystem\oldnew{/}{ }\oldnew{V}{v}ersion 
+\item
+Main functions and applications, if applicable 
+\end{itemize}
+\item
+Information in the corporate enterprise management system must be kept up-to-date. 
+\item
+Configuration changes for production servers must follow the appropriate change management procedures
+\end{itemize}
+\item
+For security, compliance\oxford{} and maintenance purposes, authorized personnel may monitor and audit equipment, systems, processes\oxford{} and network traffic per the Audit Policy.%TODO Audit Policy
+\end{enumerate}
+\subsection{Configuration Requirements}
+\begin{enumerate}
+\item
+Operating \oldnew{S}{s}ystem configuration should be in accordance with approved \gls{infosec} guidelines. 
+\item
+Services and applications that will not be used must be disabled where practical.
+\item
+Access to services should be logged and/or protected through access-control methods such as a web application firewall, if possible. 
+\item
+The most recent security patches must be installed on the system as soon as practical, the only exception being when immediate application would interfere with business requirements. 
+\item
+Trust relationships between systems are a security risk, and their use should be avoided.  
+Do not use a trust relationship when some other method of communication is sufficient. 
+\item
+Always use standard security principles of least required access to perform a function.  
+Do not use \texttt{root} or \texttt{Administrator} when a non-privileged account will do. 
+\item
+If a methodology for secure channel connection is available (\ie, technically feasible), privileged access must be performed over secure channels, (\eg, encrypted network connections using \gls{ssh} or \gls{ipsec}). 
+\item
+Servers should be physically located in an access-controlled environment. 
+\item
+Servers are specifically prohibited from operating from uncontrolled cubicle areas. 
+\end{enumerate}
+\subsection{Monitoring}
+\begin{enumerate}
+\item
+All security-related events on critical or sensitive systems must be logged and audit trails saved as follows: 
+\begin{itemize}
+\item
+All security related logs will be kept online for a minimum of 1 week. 
+\item
+Daily incremental tape backups will be retained for at least 1 month. 
+\item
+Weekly full tape backups of logs will be retained for at least 1 month. 
+\item
+Monthly full backups will be retained for a minimum of 2 years. 
+\end{itemize}
+\item 
+Security-related events will be reported to \gls{infosec}, who will review logs and report incidents to \gls{it} management.  
+Corrective measures will be prescribed as needed.  
+Security-related events include, but are not limited to: 
+\begin{itemize}
+\item
+Port-scan attacks 
+\item
+Evidence of unauthorized access to privileged accounts 
+\item
+Anomalous occurrences that are not related to specific applications on the host. 
+\end{itemize}
+\end{enumerate}
+\CommonPolicyCompliance
+\section{Related Standards, Policies\oxford{} and Processes}
+\begin{itemize}
+\item
+Audit Policy%TODO
+\item
+DMZ Equipment Policy%TODO
+\end{itemize}
+\CommonDefinitionsAndTerms
+\begin{itemize}
+\item \gls{dmz}
+\end{itemize}
+\CommonRevisionHistory
