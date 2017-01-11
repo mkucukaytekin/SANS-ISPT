@@ -7,13 +7,15 @@
 \include{./commons}
 \include{./stylesheet}
 
-\makeindex
 \loadglsentries{./glossary}
+\makeindex
 \makeglossaries
+\immediate\write18{makeindex -s main.ist -o main.gls main.glo}
 
 \begin{document}
 \newcommand{\xio}{\textsf{\textbf{x\i{}o}\texttt{\textsc{nyc}}}}
-\author{\xio}
+\author{SANS Team}
+\thanks{\xio{}, \LaTeX{} edition}
 \title{SANS Internet Policy Templates}
 \date{}
 
@@ -82,6 +84,6 @@
 %\backmatter
 %% bibliography, glossary and index would go here.
 %\printindex
-\glsaddall
+\immediate\write18{makeindex -s main.ist -o main.gls main.glo}
 \printglossaries
 \end{document}
